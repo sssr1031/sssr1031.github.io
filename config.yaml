@@ -1,0 +1,69 @@
+baseurl: https://sssr1031.github.io
+theme: hugo-theme-stack
+languageCode: ja-ja
+title: sss
+publishDir: docs
+
+params:
+  mainSections:
+    - posts
+
+  sidebar:
+    subtitle:
+      競プロとか
+    avatar:
+      enabled: true
+      local: false
+      src: /images/icon.png
+
+  article:
+    math: true
+    toc: true
+    readingTime: false
+    comments:
+      enabled: false
+
+  widgets:
+    homepage:
+      - type: categories
+        params:
+          limit: 10
+      - type: tag-cloud
+        params:
+          limit: 10
+    page:
+      - type: toc
+
+  imageProcessing:
+    cover:
+      enabled: true
+    content:
+      enabled: true
+
+related:
+  includeNewer: true
+  threshold: 60
+  toLower: false
+  indices:
+    - name: tags
+      weight: 100
+
+    - name: categories
+      weight: 200
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    endLevel: 4
+    ordered: true
+    startLevel: 1
+  highlight:
+    noClasses: true
+    codeFences: true
+    guessSyntax: true
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: true
+    tabWidth: 2
